@@ -24,7 +24,6 @@ The Bloom skill improves agent judgment. It tells the agent how to:
 - Choose a supported aspect ratio for common channels
 - Pull and pass reference images when a brand has a distinctive visual language
 - Write concise in-image headline copy
-- Avoid duplicate brand onboarding
 
 The skill does not authenticate Bloom or install the MCP server by itself.
 
@@ -73,8 +72,6 @@ Use this when you want to hand the skill to an agent for one session:
 ```bash
 npx skills use TomasWard1/bloom-skills@bloom
 ```
-
-You can pipe that prompt into an agent CLI if your workflow supports it.
 
 ## Connect Bloom MCP
 
@@ -183,12 +180,6 @@ Create a LinkedIn image for this feature announcement. Use Bloom and choose the 
 ```text
 Make a story-sized version of the last Bloom image.
 ```
-
-## Batch Guidance
-
-Do not default to large batches just because the agent can call Bloom repeatedly. Generations spend credits.
-
-Ask for confirmation before creating many images, or follow the user's explicit count. For exploratory work, start small, review, then iterate.
 
 ## Troubleshooting
 
