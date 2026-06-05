@@ -17,7 +17,7 @@ Bloom is brand-aware: brand visual DNA, palette, typography, and aesthetic direc
 2. Install the Bloom skill:
 
    ```bash
-   npx skills add TomasWard1/bloom-skills --skill bloom
+   npx skills add TomasWard1/bloom-skills --skill bloom --global
    ```
 
 3. Ask your agent to create with Bloom:
@@ -34,7 +34,7 @@ If your agent can run terminal commands in your project, give it this:
 
 ```text
 Install the Bloom skill by running:
-npx skills add TomasWard1/bloom-skills --skill bloom
+npx skills add TomasWard1/bloom-skills --skill bloom --global
 
 Then connect Bloom MCP from:
 https://trybloom.ai/mcp
@@ -48,7 +48,7 @@ Use this flow for Claude Code, Codex, Cursor, OpenCode, Windsurf, and other loca
 
 These clients need a manual skill upload. Do not give them the `npx skills add` command and expect it to install locally.
 
-1. Download [`dist/bloom.skill.zip`](dist/bloom.skill.zip).
+1. Download [`bloom.skill.zip`](https://github.com/TomasWard1/bloom-skills/raw/main/dist/bloom.skill.zip).
 2. Upload that ZIP in Claude's Skills settings.
 3. Connect Bloom MCP from:
 
@@ -60,7 +60,13 @@ The ZIP root contains `SKILL.md` and `rules/`, which is the structure Claude exp
 
 ## Install
 
-Install the Bloom skill with `npx skills`:
+Recommended: install the Bloom skill globally so it is available across projects:
+
+```bash
+npx skills add TomasWard1/bloom-skills --skill bloom --global
+```
+
+To install only in the current project:
 
 ```bash
 npx skills add TomasWard1/bloom-skills --skill bloom
