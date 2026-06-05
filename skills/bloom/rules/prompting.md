@@ -12,7 +12,7 @@ Most of the time a short prompt that leans on the brand layer beats a long one. 
 
 > A [brand] post. Headline: "[copy]." Use the brand's full artistic direction.
 
-Start there. Add subject and composition detail only when the concept needs it — a specific scene, a particular layout, an object that has to be in frame. Don't pad the prompt to make it feel complete.
+Start there. Add subject and composition detail only when the concept needs it: a specific scene, a particular layout, an object that has to be in frame. Don't pad the prompt to make it feel complete.
 
 ## What to prompt for
 
@@ -26,15 +26,15 @@ Specify medium when you want to nudge toward a particular idiom: "photograph," "
 
 ## References over adjectives
 
-When reference images are attached, say "Match the style of the attached references" rather than re-describing that style in words. The references already carry the look; describing it again in adjectives only gives the model a second, blurrier copy to reconcile against the first. If you want a *specific* look the brand wouldn't reach by default, attach a reference — don't write it out.
+When reference images are attached, say "Match the style of the attached references" rather than re-describing that style in words. The references already carry the look; describing it again in adjectives only gives the model a second, blurrier copy to reconcile against the first. If you want a *specific* look the brand wouldn't reach by default, attach a reference; don't write it out.
 
 ## Constraints, not styling
 
-Negative constraints are legitimate and useful; aesthetic adjectives aren't. "No humans, no laptops, no UI mockups" steers the model away from the generic person-at-a-laptop SaaS-stock default it falls into when left unguided. That's a real instruction. "Sleek, modern, premium" is not — it just repeats the brand layer.
+Negative constraints are legitimate and useful; aesthetic adjectives aren't. "No humans, no laptops, no UI mockups" steers the model away from the generic person-at-a-laptop SaaS-stock default it falls into when left unguided. That's a real instruction. "Sleek, modern, premium" is not; it just repeats the brand layer.
 
 ## Palette-color override
 
-If a brand color shouldn't dominate a particular image — a red accent showing up as the primary color when it should be a highlight — call it out explicitly in the prompt ("red used only as a small accent, not the dominant color"). If the same problem keeps recurring across generations, the fix is upstream: suggest updating the brand's color system in Bloom so future gens auto-correct, instead of fighting it per-prompt.
+If a brand color shouldn't dominate a particular image (a red accent showing up as the primary color when it should be a highlight), call it out explicitly in the prompt ("red used only as a small accent, not the dominant color"). If the same problem keeps recurring across generations, the fix is upstream: suggest updating the brand's color system in Bloom so future gens auto-correct, instead of fighting it per-prompt.
 
 ## The failure mode
 
@@ -46,7 +46,7 @@ The most common mistake when prompting Bloom is over-specifying aesthetic. Sever
 
 **Generic person-at-laptop scenes.** Asking for "a person working on a laptop" or "a team collaborating in an office" lands you in the stock-photo default the brand layer is trying to escape. If the concept genuinely needs a person, describe a specific, non-generic moment; otherwise constrain it out.
 
-**Premium-restraint applied to the wrong brand.** The system aims for clean and refined by default, but not every brand wants that register. A brand that's loud, playful, maximalist, or gritty should be prompted to its actual identity — don't reflexively reach for "editorial restraint" and "lots of whitespace" on a brand whose whole point is energy. Match the brand's real register, not a generic premium one.
+**Premium-restraint applied to the wrong brand.** The system aims for clean and refined by default, but not every brand wants that register. A brand that's loud, playful, maximalist, or gritty should be prompted to its actual identity; don't reflexively reach for "editorial restraint" and "lots of whitespace" on a brand whose whole point is energy. Match the brand's real register, not a generic premium one.
 
 ## Examples
 
@@ -70,7 +70,7 @@ Subject (laptop, desk, dashboard), composition (elevated angle, dashboard visibl
 
 > A professional, sophisticated, premium pricing card with three glowing tiers floating against a futuristic minimalist gradient background, modern tech aesthetic.
 
-*Professional, sophisticated, premium, minimalist, modern* are redundant. *Glowing, futuristic, tech aesthetic* fight the anti-cliché stance. And the prompt is fully aesthetic — it never says what's actually in the frame.
+*Professional, sophisticated, premium, minimalist, modern* are redundant. *Glowing, futuristic, tech aesthetic* fight the anti-cliché stance. And the prompt is fully aesthetic; it never says what's actually in the frame.
 
 **Better prompt:**
 
