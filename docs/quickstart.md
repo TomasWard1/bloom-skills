@@ -14,6 +14,38 @@ Then connect Bloom MCP from:
 https://trybloom.ai/mcp
 ```
 
+## Choose Your Client
+
+### Claude Code, Codex, Cursor, And Local Agents
+
+If your agent can run terminal commands in your project, give it this:
+
+```text
+Install the Bloom skill by running:
+npx skills add TomasWard1/bloom-skills --skill bloom
+
+Then connect Bloom MCP from:
+https://trybloom.ai/mcp
+
+After that, use Bloom whenever I ask for image generation.
+```
+
+Use this flow for Claude Code, Codex, Cursor, OpenCode, Windsurf, and other local coding agents that support Agent Skills through `npx skills`.
+
+### Claude Desktop, Claude Web, And Cowork
+
+These clients need a manual skill upload. Do not give them the `npx skills add` command and expect it to install locally.
+
+1. Download [`../dist/bloom.skill.zip`](../dist/bloom.skill.zip).
+2. Upload that ZIP in Claude's Skills settings.
+3. Connect Bloom MCP from:
+
+   ```text
+   https://trybloom.ai/mcp
+   ```
+
+The ZIP root contains `SKILL.md` and `rules/`, which is the structure Claude expects.
+
 ## What This Skill Does
 
 The Bloom MCP server owns the mechanics: authentication, tool parameters, generation, editing, resizing, image lookup, and credits.
@@ -114,27 +146,15 @@ Cursor:
 }
 ```
 
-## Claude Web Or Cloud Sessions
+## Manual ZIP Build
 
-`npx skills` installs into local coding agents. Claude web/cloud sessions usually cannot run local install commands for you.
+The checked-in ZIP at [`../dist/bloom.skill.zip`](../dist/bloom.skill.zip) is the easiest path for Claude Desktop, Claude web, and Cowork.
 
-For Claude web, upload the skill as a ZIP:
+If you need to rebuild it from source:
 
 ```bash
 cd skills/bloom
-zip -r ../../bloom.skill.zip SKILL.md rules
-```
-
-Then upload `bloom.skill.zip` in Claude's Skills settings. The ZIP root should contain `SKILL.md` and `rules/`.
-
-If you are giving instructions to a cloud coding agent that can run shell commands in a repository, tell it:
-
-```text
-Install the Bloom skill with:
-npx skills add TomasWard1/bloom-skills --skill bloom
-
-Then connect Bloom MCP using:
-https://trybloom.ai/mcp
+zip -r ../../dist/bloom.skill.zip SKILL.md rules
 ```
 
 ## Check That It Installed
