@@ -1,8 +1,8 @@
 # Bloom Agent Skills
 
-Agent skill for using Bloom's MCP image tools well.
+Agent skill for using Bloom's MCP.
 
-Bloom is brand-aware: brand visual DNA, palette, typography, and aesthetic direction are already handled by the Bloom MCP server. This skill teaches agents how to write useful prompts, choose ratios, attach references, and write in-image headline copy without fighting the brand layer.
+Bloom is brand-aware: brand visual DNA, palette, typography, and aesthetic direction are already handled by the Bloom MCP server. This skill teaches agents how to write useful prompts, choose aspect ratios, attach references, and write in-image headline copy.
 
 ## Install
 
@@ -10,12 +10,6 @@ Install the Bloom skill with `npx skills`:
 
 ```bash
 npx skills add trybloomai/bloom-skills --skill bloom
-```
-
-To install every skill in this repository:
-
-```bash
-npx skills add trybloomai/bloom-skills --all
 ```
 
 For local testing from this repository:
