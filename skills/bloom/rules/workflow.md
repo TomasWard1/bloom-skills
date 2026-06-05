@@ -23,3 +23,16 @@ Before calling `bloom_onboard_brand`, check whether the brand is already there �
 ## Be honest when a batch gets pushback
 
 When the user pushes back — "these are boring," "why is everything red?" — give a real diagnosis, not a generic apology. The pushback is usually right. Say what went wrong (the prompt leaned on the brand layer too hard and got generic; the palette override wasn't set so the accent color took over) and what you'll change in the next batch. A real answer is more useful than "sorry, let me try again."
+
+## When a run fails, recover — don't retry blindly
+
+A failed generation costs credits and time. Read what went wrong before firing another call, and tell the user instead of looping silently.
+
+| Symptom | Likely cause | What to do |
+|---|---|---|
+| Generation stays pending past the wait window | The job is slow or stuck, not finished | Collect once more with `wait: true`. If it still hasn't resolved, tell the user — don't fire a fresh generation, that just burns credits on a duplicate. |
+| The tool call returns an error | Bad parameter, missing reference, or a transient failure | Surface the actual error to the user. Fix the specific cause (attach the missing reference, correct the parameter) and retry once — never loop the same failing call. |
+| Out of credits | The account balance is exhausted | Stop. Tell the user they're out of credits and need to top up — retrying will keep failing. Check with `bloom_check_credits` before a large batch so you catch this up front. |
+| Prompt references an image that isn't attached | Bloom has no memory between calls | Attach the image (upload or reference ID) before the call. A pronoun or "this" with nothing attached produces an unrelated image. |
+| Output came back generic or off-brand | The prompt leaned on the brand layer; no references attached | Pull 2–4 references and regenerate with a more specific subject/composition. See the references rule above. |
+| Brand not found | The brand isn't onboarded, or the name was wrong | Call `bloom_list_brands` to confirm the exact brand. Don't re-onboard a brand that already exists — that creates a duplicate. |
