@@ -53,7 +53,7 @@ frame. Photograph.
 | Your agent | How to install |
 |---|---|
 | **Claude Code, Codex, Cursor, Windsurf, OpenCode** | Run `npx skills add TomasWard1/bloom-skills --skill bloom --global` |
-| **Claude Desktop, Claude Web, Cowork** | Download [`bloom.skill.zip`](https://github.com/TomasWard1/bloom-skills/raw/main/dist/bloom.skill.zip) and upload it in Skills settings |
+| **Claude Desktop, Claude Web, Cowork** | Download [`bloom.skill.zip`](https://github.com/TomasWard1/bloom-skills/releases/latest/download/bloom.skill.zip) and upload it in Skills settings |
 
 Drop `--global` to install in the current project only. Full per-agent setup, updates, and troubleshooting live in [docs/quickstart.md](docs/quickstart.md).
 
