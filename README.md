@@ -1,107 +1,77 @@
-![Bloom MCP social card](assets/bloom-mcp-og.png)
+<div align="center">
 
-# Bloom Agent Skills
+<img src="assets/bloom-mcp-og.png" alt="Bloom" width="100%" />
 
-Agent skill for using Bloom's MCP.
+<br />
 
-Bloom is brand-aware: brand visual DNA, palette, typography, and aesthetic direction are already handled by the Bloom MCP server. This skill teaches agents how to write useful prompts, choose aspect ratios, attach references, and write in-image headline copy.
+# Bloom Agent Skill
+
+**Teach your agent to create on-brand images with Bloom.**
+
+[![skills.sh](https://skills.sh/b/TomasWard1/bloom-skills)](https://skills.sh/TomasWard1/bloom-skills)
+&nbsp;
+[![MCP](https://img.shields.io/badge/MCP-trybloom.ai-7C3AED)](https://trybloom.ai/mcp)
+&nbsp;
+[![License](https://img.shields.io/badge/License-MIT-191919)](LICENSE)
+
+<br />
+
+![Claude Code](https://img.shields.io/badge/Claude_Code-191919?logo=anthropic&logoColor=white)
+![Codex](https://img.shields.io/badge/Codex-191919?logo=openai&logoColor=white)
+![Cursor](https://img.shields.io/badge/Cursor-191919?logo=cursor&logoColor=white)
+![Windsurf](https://img.shields.io/badge/Windsurf-191919?logo=windsurf&logoColor=white)
+![OpenCode](https://img.shields.io/badge/OpenCode-191919)
+
+</div>
+
+---
+
+Bloom already owns the brand — palette, typography, logo, aesthetic. This skill teaches your agent the rest: how to write prompts, pick aspect ratios, attach references, and write in-image headline copy.
 
 ## Quickstart
 
-1. Connect the Bloom MCP server in your agent:
-
-   ```text
-   https://trybloom.ai/mcp
-   ```
-
-2. Install the Bloom skill:
-
-   ```bash
-   npx skills add TomasWard1/bloom-skills --skill bloom --global
-   ```
-
-3. Ask your agent to create with Bloom:
-
-   ```text
-   Generate an Instagram feed launch image for Acme with Bloom. The product box floating above a messy breakfast table, morning light, one hand reaching into frame. Photograph.
-   ```
-
-For agent-specific installs, Claude web/cloud setup, updates, and troubleshooting, see [docs/quickstart.md](docs/quickstart.md).
-
-## Claude Code, Codex, Cursor, And Local Agents
-
-If your agent can run terminal commands in your project, give it this:
-
-```text
-Install the Bloom skill by running:
+```bash
 npx skills add TomasWard1/bloom-skills --skill bloom --global
-
-Then connect Bloom MCP from:
-https://trybloom.ai/mcp
-
-After that, use Bloom whenever I ask for image generation.
 ```
 
-Use this flow for Claude Code, Codex, Cursor, OpenCode, Windsurf, and other local coding agents that support Agent Skills through `npx skills`.
+Then connect the Bloom MCP server in your agent:
 
-## Claude Desktop, Claude Web, And Cowork
+```text
+https://trybloom.ai/mcp
+```
 
-These clients need a manual skill upload. Do not give them the `npx skills add` command and expect it to install locally.
+And ask:
 
-1. Download [`bloom.skill.zip`](https://github.com/TomasWard1/bloom-skills/raw/main/dist/bloom.skill.zip).
-2. Upload that ZIP in Claude's Skills settings.
-3. Connect Bloom MCP from:
-
-   ```text
-   https://trybloom.ai/mcp
-   ```
-
-The ZIP root contains `SKILL.md` and `rules/`, which is the structure Claude expects.
+```text
+Generate an Instagram feed launch image for Acme with Bloom. The product box
+floating above a messy breakfast table, morning light, one hand reaching into
+frame. Photograph.
+```
 
 ## Install
 
-Recommended: install the Bloom skill globally so it is available across projects:
+| Your agent | How to install |
+|---|---|
+| **Claude Code, Codex, Cursor, Windsurf, OpenCode** | Run `npx skills add TomasWard1/bloom-skills --skill bloom --global` |
+| **Claude Desktop, Claude Web, Cowork** | Download [`bloom.skill.zip`](https://github.com/TomasWard1/bloom-skills/raw/main/dist/bloom.skill.zip) and upload it in Skills settings |
 
-```bash
-npx skills add TomasWard1/bloom-skills --skill bloom --global
-```
+Drop `--global` to install in the current project only. Full per-agent setup, updates, and troubleshooting live in [docs/quickstart.md](docs/quickstart.md).
 
-To install only in the current project:
+> Bloom MCP must be connected separately — the skill guides the agent, the MCP does the work.
 
-```bash
-npx skills add TomasWard1/bloom-skills --skill bloom
-```
-
-For local testing from this repository:
-
-```bash
-npx skills add . --skill bloom
-```
-
-## What This Includes
+## What's inside
 
 ```text
 skills/bloom/
-  SKILL.md
+  SKILL.md          dispatcher — loads first, points to the right rule
   rules/
-    prompting.md
-    copy.md
-    workflow.md
-    channels.md
+    prompting.md    subject, composition, medium
+    copy.md         in-image headline copy
+    workflow.md     references, generation flow
+    channels.md     aspect ratios per platform
 ```
 
-`SKILL.md` is the dispatcher. The files in `rules/` are task-specific guidance the agent reads only when needed.
-
-## Requirements
-
-This skill assumes the Bloom MCP server is already connected in your agent. The skill does not install or authenticate the MCP server by itself.
-
-Bloom MCP setup docs:
-
-```text
-https://trybloom.ai/mcp
-```
-
-## License
-
-MIT
+<div align="center">
+<br />
+<sub>MIT · <a href="https://trybloom.ai/mcp">trybloom.ai/mcp</a></sub>
+</div>
