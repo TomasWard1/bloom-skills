@@ -23,7 +23,7 @@ Bloom is brand-aware: brand visual DNA, palette, typography, and aesthetic direc
 3. Ask your agent to create with Bloom:
 
    ```text
-   Generate an on-brand LinkedIn image for Acme's launch. Use Bloom.
+   Generate an Instagram feed launch image for Acme with Bloom. The product box floating above a messy breakfast table, morning light, one hand reaching into frame. Photograph.
    ```
 
 For agent-specific installs, Claude web/cloud setup, updates, and troubleshooting, see [docs/quickstart.md](docs/quickstart.md).

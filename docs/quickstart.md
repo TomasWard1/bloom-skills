@@ -173,11 +173,11 @@ npx skills remove bloom
 ## Example Prompts
 
 ```text
-Generate an on-brand Instagram feed post for Acme's product launch. Use Bloom.
+Generate an Instagram feed launch image for Acme with Bloom. The product box floating above a messy breakfast table, morning light, one hand reaching into frame. Photograph.
 ```
 
 ```text
-Create a LinkedIn image for this feature announcement. Use Bloom and choose the right aspect ratio.
+Generate a LinkedIn feature announcement image for Acme with Bloom. Three product cards arranged like physical index cards on a desk, one card pulled forward as the hero. Overhead photograph.
 ```
 
 ```text
