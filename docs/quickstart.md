@@ -36,7 +36,7 @@ Use this flow for Claude Code, Codex, Cursor, OpenCode, Windsurf, and other loca
 
 These clients need a manual skill upload. Do not give them the `npx skills add` command and expect it to install locally.
 
-1. Download [`bloom.skill.zip`](https://github.com/TomasWard1/bloom-skills/raw/main/dist/bloom.skill.zip).
+1. Download [`bloom.skill.zip`](https://github.com/TomasWard1/bloom-skills/releases/latest/download/bloom.skill.zip).
 2. Upload that ZIP in Claude's Skills settings.
 3. Connect Bloom MCP from:
 
@@ -149,10 +149,10 @@ Cursor:
 
 ## Manual ZIP Build
 
-The checked-in ZIP is the easiest path for Claude Desktop, Claude web, and Cowork:
+The latest release ZIP is the easiest path for Claude Desktop, Claude web, and Cowork:
 
 ```text
-https://github.com/TomasWard1/bloom-skills/raw/main/dist/bloom.skill.zip
+https://github.com/TomasWard1/bloom-skills/releases/latest/download/bloom.skill.zip
 ```
 
 If you need to rebuild it from source:
