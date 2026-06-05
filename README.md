@@ -1,3 +1,5 @@
+![Bloom MCP social card](assets/bloom-mcp-og.png)
+
 # Bloom Agent Skills
 
 Agent skill for using Bloom's MCP.
