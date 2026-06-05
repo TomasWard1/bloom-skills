@@ -26,7 +26,7 @@
 
 ---
 
-Bloom already owns the brand — palette, typography, logo, aesthetic. This skill teaches your agent the rest: how to write prompts, pick aspect ratios, attach references, and write in-image headline copy.
+Bloom already owns the brand: palette, typography, logo, aesthetic. This skill teaches your agent the rest: how to write prompts, pick aspect ratios, attach references, and write in-image headline copy.
 
 ## Quickstart
 
@@ -57,13 +57,13 @@ frame. Photograph.
 
 Drop `--global` to install in the current project only. Full per-agent setup, updates, and troubleshooting live in [docs/quickstart.md](docs/quickstart.md).
 
-> Bloom MCP must be connected separately — the skill guides the agent, the MCP does the work.
+> Bloom MCP must be connected separately. The skill guides the agent; the MCP does the work.
 
 ## What's inside
 
 ```text
 skills/bloom/
-  SKILL.md          dispatcher — loads first, points to the right rule
+  SKILL.md          dispatcher: loads first, points to the right rule
   rules/
     prompting.md    subject, composition, medium
     copy.md         in-image headline copy
