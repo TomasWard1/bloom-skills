@@ -40,7 +40,7 @@ Then connect the Bloom MCP server in your agent:
 https://trybloom.ai/mcp
 ```
 
-And ask:
+Example prompt:
 
 ```text
 Generate an Instagram feed launch image for Acme with Bloom. The product box
