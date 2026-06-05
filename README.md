@@ -50,12 +50,26 @@ frame. Photograph.
 
 ## Install
 
-| Your agent | How to install |
-|---|---|
-| **Claude Code, Codex, Cursor, Windsurf, OpenCode** | Run `npx skills add TomasWard1/bloom-skills --skill bloom --global` |
-| **Claude Desktop, Claude Web, Cowork** | Download [`bloom.skill.zip`](https://github.com/TomasWard1/bloom-skills/releases/latest/download/bloom.skill.zip) and upload it in Skills settings |
+The [Quickstart](#quickstart) command above covers every terminal agent. Find your client:
 
-Drop `--global` to install in the current project only. Full per-agent setup, updates, and troubleshooting live in [docs/quickstart.md](docs/quickstart.md).
+<table>
+  <tbody>
+    <tr>
+      <td><img src="assets/logos/claude.svg" height="15" align="absmiddle" />&nbsp; <b>Claude Code</b></td>
+      <td rowspan="5">Run the <a href="#quickstart"><code>npx skills add</code></a> command above.<br />Drop <code>--global</code> to install in the current project only.</td>
+    </tr>
+    <tr><td><img src="assets/logos/openai.svg" height="15" align="absmiddle" />&nbsp; <b>Codex</b></td></tr>
+    <tr><td><img src="assets/logos/cursor.svg" height="15" align="absmiddle" />&nbsp; <b>Cursor</b></td></tr>
+    <tr><td><img src="assets/logos/windsurf.svg" height="15" align="absmiddle" />&nbsp; <b>Windsurf</b></td></tr>
+    <tr><td><img src="assets/logos/opencode.svg" height="15" align="absmiddle" />&nbsp; <b>OpenCode</b></td></tr>
+    <tr>
+      <td><img src="assets/logos/claude.svg" height="15" align="absmiddle" />&nbsp; <b>Claude Desktop · Web · Cowork</b></td>
+      <td>Download the <a href="https://github.com/TomasWard1/bloom-skills/releases/latest/download/bloom.skill.zip">ZIP</a> and upload it in Skills settings.</td>
+    </tr>
+  </tbody>
+</table>
+
+Full per-agent setup, updates, and troubleshooting live in [docs/quickstart.md](docs/quickstart.md).
 
 > Bloom MCP must be connected separately. The skill guides the agent; the MCP does the work.
 
